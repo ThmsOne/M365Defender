@@ -1,0 +1,2 @@
+DeviceRegistryEvents
+| where RegistryValueData in('Flyintellect Inc.', 'Datalyst ou')
