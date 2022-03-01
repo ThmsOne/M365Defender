@@ -1,0 +1,4 @@
+DeviceNetworkEvents 
+| where InitiatingProcessFileName in ("RegSvcs.exe","RegAsm.exe", "InstallUtil.exe") 
+| where InitiatingProcessCommandLine in ("\"RegAsm.exe\"","\"RegSvcs.exe\"","\"InstallUtil.exe\"") 
+| where InitiatingProcessParentFileName endswith "Powershell.exe"

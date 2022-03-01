@@ -1,0 +1,4 @@
+// Searches for possible Cypherpunk ransomware activity
+DeviceProcessEvents
+| where InitiatingProcessParentFileName startswith "psexe"
+| where ProcessCommandLine has "Dvr /go"

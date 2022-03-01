@@ -1,0 +1,3 @@
+DeviceProcessEvents
+| where InitiatingProcessFileName =~ "SolarWinds.BusinessLayerHost.exe"
+| where FileName == "cmd.exe" and ProcessCommandLine has "echo"

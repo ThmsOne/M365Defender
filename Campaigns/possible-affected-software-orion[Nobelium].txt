@@ -1,0 +1,5 @@
+DeviceTvmSoftwareVulnerabilities
+| where SoftwareVendor == 'solarwinds'
+| where SoftwareName startswith 'orion'
+| summarize dcount(DeviceName) by SoftwareName
+| sort by dcount_DeviceName desc

@@ -1,0 +1,6 @@
+// RobbinHood execution and security evasion 
+DeviceProcessEvents 
+| where Timestamp > ago(7d) 
+| where InitiatingProcessFileName =~ "winlogon.exe"  
+| where FileName == "cmd.exe" and ProcessCommandLine has_any("taskkill", "net", 
+"robbin", "vssadmin", "bcdedit", "wevtutil")
